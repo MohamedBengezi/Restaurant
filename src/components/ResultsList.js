@@ -6,6 +6,9 @@ import { withNavigation } from 'react-navigation';
 
 
 const ResultsList = ({ title, results, navigation }) => {
+    //if we don't have any results don't show the section title
+    if (!results.length) return null;
+
     return (
         <View style={styles.containerStyle}>
             <Text style={styles.titleStyle}>{title}</Text>
